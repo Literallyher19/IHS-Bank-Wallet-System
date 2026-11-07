@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: orchid;
+    color:darkorchid;
+}
+
+.container{
+    width: 92%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+header{
+    text-align:center;
+    
+    color:darkmagenta;
+   
+}
+
+header h1{
+    color:white;
+    text-align: center;
+    font-size:50px ;
+    font-weight: bold;
+}
+
+header p{
+    color:white;
+    font-size:20px;
+    font-style: italic;
+}
+
+.Account-display{
+    background-color: orchid;
+    color:white;
+    text-align: center;
+    padding: 28px 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px #00000015;
+}
+
+.Account-display h2{
+    font-size:30px;
+    margin:15px 0;
+}
+
+.Account-display button{
+    background: orchid;
+    color:white;
+
+}
+
+.wallet-section {
+    background: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #0000000a;
+}
+
+.wallet-section h2 {
+    margin-top: 0;
+    color: #166534;
+    font-size: 21px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #86efac;
+    border-color: #15803d;
+}
+
+button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px;
+    background: #15803d;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #166534;
+}
+
+.balance-card button:hover {
+    background: #dcfce7;
+}
+
+.secondary-button {
+    background: #64748b;
+}
+
+#recipientName {
+    background: #f0fdf4;
+    padding: 12px;
+    border-radius: 6px;
+    color: #166534;
+}
+
+#message {
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+#message.success,
+#message.error {
+    padding: 12px;
+    border-radius: 7px;
+}
+
+#message.success {
+    color: #166534;
+    background: #dcfce7;
+}
+
+#message.error {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 570px;
+}
+
+th, td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    .wallet-section {
+        padding: 16px;
+    }
+
+    .balance-card h2 {
+        font-size: 27px;
+    }
+}

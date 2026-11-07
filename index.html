@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I&H&S BANK</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>IHS BANK</h1>
+        <p>Your Money, One Tap Away!!!</p>
+      </header>
+
+      <section class="balance-card">
+        <p>Available Wallet Balance</p>
+        <h2 id="balance">KSh 300,000.00</h2>
+        <button type="button" onclick="toggleBalance()">
+          Show/Hide Balance
+        </button>
+        <p id="message" role="status" aria-live="polite"></p>
+      </section>
+
+      <!-- SEND MONEY -->
+      <section class="wallet-section">
+        <h2>Send Money</h2>
+
+        <label for="recipientPhone">Recipient's Phone Number</label>
+        <input
+          type="tel"
+          id="recipientPhone"
+          placeholder="e.g. 0712345678"
+          maxlength="13"
+        />
+
+        <button type="button" onclick="findRecipient()">Find Recipient</button>
+
+        <p id="recipientName">Recipient name will appear here.</p>
+
+        <label for="sendAmount">Amount (KSh)</label>
+        <input
+          type="number"
+          id="sendAmount"
+          placeholder="Enter amount"
+          min="0.01"
+          step="0.01"
+        />
+
+        <label for="sendPin">Enter PIN</label>
+        <input
+          type="password"
+          id="sendPin"
+          placeholder="Enter your 4-digit PIN"
+          inputmode="numeric"
+          maxlength="4"
+        />
+
+        <button type="button" onclick="sendMoney()">
+          Complete Transaction
+        </button>
+      </section>
+
+      <!-- WITHDRAW MONEY -->
+      <section class="wallet-section">
+        <h2>Withdraw Money</h2>
+
+        <label for="withdrawAmount">Amount (KSh)</label>
+        <input
+          type="number"
+          id="withdrawAmount"
+          placeholder="Enter amount"
+          min="0.01"
+          step="0.01"
+        />
+
+        <label for="withdrawPin">Enter PIN</label>
+        <input
+          type="password"
+          id="withdrawPin"
+          placeholder="Enter 4-digit PIN"
+          inputmode="numeric"
+          maxlength="4"
+        />
+
+        <button type="button" onclick="withdrawMoney()">
+          Complete Transaction
+        </button>
+      </section>
+
+      <!-- DEPOSIT MONEY -->
+      <section class="wallet-section">
+        <h2>Deposit Money</h2>
+
+        <label for="depositSource">Source of Money</label>
+        <select id="depositSource">
+          <option value="">Select option</option>
+          <option value="Mobile Money">Mobile Money</option>
+          <option value="Bank Transfer">Bank Transfer</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="depositAmount">Amount (KSh)</label>
+        <input
+          type="number"
+          id="depositAmount"
+          placeholder="Enter amount"
+          min="0.01"
+          step="0.01"
+        />
+
+        <label for="depositPin">Enter PIN</label>
+        <input
+          type="password"
+          id="depositPin"
+          placeholder="Enter 4-digit PIN"
+          inputmode="numeric"
+          maxlength="4"
+        />
+
+        <button type="button" onclick="depositMoney()">
+          Complete Transaction
+        </button>
+      </section>
+
+      <!-- TRANSACTION HISTORY -->
+      <section class="wallet-section">
+        <h2>Transaction History</h2>
+
+        <button type="button" onclick="clearHistory()" class="secondary-button">
+          Clear Demo History
+        </button>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Transaction</th>
+                <th>Details</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody id="history">
+              <tr>
+                <td colspan="5">No transactions yet.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer>
+        <p>IHS Wallet System</p>
+      </footer>
+    </div>
+
+    <!-- CONNECT JAVASCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
